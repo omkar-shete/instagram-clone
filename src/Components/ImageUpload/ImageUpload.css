@@ -4,19 +4,26 @@
   flex-direction: column;
   /* align-items: flex-start; */
   /* width: 40vw; */
-  width: 100%;
-  min-width: 360px;
+  width: 97%;
+  min-width: none;
   /* margin: auto; */
   margin: 2vh 0;
-  border-bottom: 1px solid rgb(212, 212, 212);
-  /* padding-left: 0.5rem;  */
-  /* padding-top: 0.5rem; */
+  /* border-bottom: 1px solid rgb(212, 212, 212); */
+  padding-left: 1rem; 
+  padding-top: 1rem;
   margin-bottom: 3rem;
   margin-top: 1rem;
+  /* position:sticky; */
+  /* top: 0; */
+  background-color: white;
+  z-index: 1;
+  border: 0.5px solid lightgray;
+  border-radius: 10px;
+  /* padding: 1rem; */
 }
 
 .imageUpload__progressbar{
-  width: 100%;
+  width: 98%;
 }
 
 .imageUpload>h4{
@@ -25,5 +32,18 @@
 
 .imageUpload__captionInput{
   margin-top: 0.2rem;
+  width: 97%;
   /* padding: ; */
 }
+
+/* .imageUpload__fileInput{
+  width: 99%;
+}
+
+.imageUpload > button{
+  width: 99% !important;
+}
+
+.imageUpload > h4 {
+  width: 99%;
+} */

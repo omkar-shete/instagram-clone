@@ -86,6 +86,7 @@ export default function ImageUpload({username}) {
 
     {/* file piker  */}
       <input 
+        className='imageUpload__fileInput'
         type="file"
         // value={image} //doesntwork
         onChange={imgHandler}
