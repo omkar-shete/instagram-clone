@@ -10,7 +10,7 @@ import 'firebase/compat/storage';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDgcuOIUKUbOSkrjgOXzdXyzyWC-LF4_r4",
+  apiKey: `${process.env.REACT_APP_firebaseAPIKey}`,
   authDomain: "instagram-clone-c4f01.firebaseapp.com",
   projectId: "instagram-clone-c4f01",
   storageBucket: "instagram-clone-c4f01.appspot.com",
