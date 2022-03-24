@@ -1,0 +1,83 @@
+.post{
+  /* background-color: aliceblue; */
+  border: 1px solid lightgray;
+  width: 50vw;
+  min-width: 360px;
+  padding-bottom: 1rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+}
+
+/* ------------------------------ */
+.post__header{
+  /* background-color: antiquewhite; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post__head__left{
+  display: flex;
+  align-items: center;
+}
+
+.post__avatar{
+  margin: 0.5rem;
+  /* padding: 0.3rem 0.5rem; */
+}
+
+
+
+/* ------------------------------- */
+.post__img{
+  /* width: 50vw; */
+  /* min-width: 360px; */
+  width: 100%;
+  object-fit: contain;
+  /* margin: 0; */
+}
+
+
+/* ------------------------------- */
+.post__icons{
+  /* background-color: antiquewhite; */
+  /* padding: 0.25rem 0.5rem; */
+  display: flex;
+  justify-content: space-between;
+}
+.post__icon{
+  padding: 0.5rem ;
+  /* background-color: aqua;  */
+}
+
+
+
+/* --------------------------------- */
+.post__caption{
+  font-weight: normal;
+  margin-left: 0.5rem;
+  border-bottom: 0.5px solid lightgray;
+  padding-bottom: 0.2rem;
+}
+
+
+/* ----------------comnts------------- */
+.posts__commentsForm{
+  display: flex;
+  padding: 0.5rem;
+}
+
+.posts__commentsForm__inp{
+  flex: 1;
+  border: 0.5px solid lightgray;
+}
+
+.posts__commentsForm > button {
+  border: 0.5px solid lightgray;
+  background-color: white;
+}
+
+/* ----------------- */
+.posts__comments{
+  padding: 0.5rem;
+}

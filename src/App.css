@@ -1,38 +1,66 @@
+*{
+  margin: 0;
+}
+
 .App {
-  text-align: center;
+  /* background-color: aliceblue; */
+  width: 50vw;
+  min-width: 360px;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+/* ------------------------HEADER------ */
+
+.app__header{
+  /* background-color: aliceblue; */
+  /* height: 10vh; */
+
+  padding: 0.35rem;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__header__logo{
+  object-fit: contain;
+  height: 7vh;
+  min-height: 30px;
+
+  /* padding: 0.35rem; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* .imageUpload__fileInput > Button{
+  border: 1px solid black !important;
+} */
+
+
+.app__head__user{
+  display: flex;
+  justify-content: center;
+}
+
+.app__head__userAvatar{
+  background-color: rgb(187, 187, 255);
+  color: black;
+  margin-right: 0.5rem;
+  padding: 0 0.7rem;
+  border: 1px solid blue;
+  border-radius: 100rem;
+}
+
+
+/* -------------------- */
+
+.app__signupModal{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
