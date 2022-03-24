@@ -129,7 +129,7 @@ function App() {
             </div>)
           :
           (<div className="app__head__user">
-            <div className="app__head__userAvatar"> <h2>{user.displayName[0]}</h2> </div>
+            <div className="app__head__userAvatar"> <h2>{user?.displayName[0]}</h2> </div>
             <Button onClick={() => auth.signOut()}>LOG OUT</Button>
           </div>)
           }

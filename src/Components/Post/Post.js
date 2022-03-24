@@ -5,7 +5,7 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import SendIcon from '@mui/icons-material/Send';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 import Avatar from '@mui/material/Avatar';
-import db from '../../firebase';
+import db, { storage } from '../../firebase';
 import firebase from 'firebase/compat/app';
 import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
@@ -52,6 +52,22 @@ export default function Post( {postId, user, username, caption, imageURL} ) {
     setComment('');
   }
 
+
+  const deletePostHandler = () => {
+    if (user?.displayName===username) {
+      alert("This post will no longer be visible in the feed");
+      //deleting from db
+      db.collection('posts').doc(postId).delete();
+      //deleting from storage
+      storage
+        .refFromURL(imageURL)
+        // .child(imageURL)
+        .delete()
+        .then(alert('Post deleted successfully!'))
+        .catch((err) => alert(err.message))
+    }    
+  }
+
 //--------------RET-----------------
   return (
     <div className='post'>
@@ -69,12 +85,17 @@ export default function Post( {postId, user, username, caption, imageURL} ) {
           <h3>{username}</h3>
         </div>
 
-      {/* DEL ICON    */}
+      {/* DEL ICON --only if its your post   */}
+       {(user?.displayName===username) ?
         <div className="post__head__right">
-          <IconButton>
+          <IconButton onClick={deletePostHandler}>
             <DeleteIcon/>
           </IconButton>
         </div>
+        :
+        <div></div>
+       }
+        
       </div>
 
 
@@ -114,7 +135,7 @@ export default function Post( {postId, user, username, caption, imageURL} ) {
     {/* SHOW COMMENTS */}
       <div className='posts__comments'>
         {comments.map(com=>(
-          <p>
+          <p key={com.timestamp}>
             <strong>{com.commenterName}: </strong>
             {com.comment}
           </p>

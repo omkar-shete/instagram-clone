@@ -63,6 +63,7 @@ export default function ImageUpload({username}) {
           setCaption('');
           setImage(null);
         })
+        .catch((err) => alert(err.message))
       }
 
     )
